@@ -1,5 +1,8 @@
-# helloScript
+# GujjuScript
 Create own Programming language for fun
+
+# extension
+main.gujju
 
 # Syntax 
 
@@ -13,5 +16,16 @@ lakho sum
 
 # Keyword
 
-- `aa` is a keyword for variable declaration
-- `lakho` is a keyword for print statement
+- `chhap` print
+- `dabbu` variable
+- `havaChustDabbu` constant
+- `jo` if
+- `joHaji` else if
+- `nahito` else
+- `chakedu` for
+- `jyashudhi` while
+- `kamBol` function
+- `baraber` true
+- `nahoy` false
+- `ubhore` break
+- `chalvade` continue
