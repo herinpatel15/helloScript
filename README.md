@@ -6,13 +6,13 @@ main.gujju
 
 # Syntax 
 
-`
+```
 aa x = 2
 aa y = 5
 aa sum = x + y
 
 lakho sum
-`
+```
 
 # Keyword
 
