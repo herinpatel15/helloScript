@@ -3,10 +3,11 @@ export const Token = {
     OPERATOR: 'operator',
     IDENTIFIER: 'identifier',
     NUMBER: 'number',
+    STRING: 'string'
 }
 
 export const  Keywords = {
-    CHHAP: "chhap",
+    CHHAP: "chhap", 
     DABBU: "dabbu",
     HAVA_CHUST_DABBU: "havaChustDabbu",
     JO: "jo",
@@ -28,6 +29,7 @@ export const Operators = {
     LESS_THAN: "<",
     GREATER_THAN_OR_EQUALS: ">=",
     LESS_THAN_OR_EQUALS: "<=",
+    MODULES: "%",
     ADD: "+",
     SUBTRACT: "-",
     DIVIDE: "/",

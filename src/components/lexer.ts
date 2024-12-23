@@ -14,7 +14,7 @@ export function lexer(input: string) {
         }
 
         // check alphabet a-z && A-Z
-        if (/[a-zA-Z]/.test(char)) {
+        else if (/[a-zA-Z]/.test(char)) {
             let word = '';
             while (/[a-zA-Z0-9]/.test(char)) {
                 word += char;
@@ -29,7 +29,7 @@ export function lexer(input: string) {
         }
 
         // check digits 0-9
-        if (/[0-9]/.test(char)) {
+        else if (/[0-9]/.test(char)) {
             let num = '';
             while (/[0-9]/.test(char)) {
                 num += char;
@@ -40,10 +40,17 @@ export function lexer(input: string) {
         }
 
         // check operators
-        if (Object.values(Operators).includes(char)) {
+        else if (Object.values(Operators).includes(char)) {
             tokens.push({ type: Token.OPERATOR, value: char });
             cursor++;
             continue;
+        }
+
+        // check string
+        else if (/['"`]/.test(char)) {
+            tokens.push({type: Token.STRING, value: char});
+            cursor++
+            continue
         }
     }
     return tokens;

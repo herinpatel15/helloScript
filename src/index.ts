@@ -2,11 +2,12 @@ import { codeRunner } from "./components/codeRunner";
 import { compiler } from "./components/compiler";
 
 const code = `
-dabbu x = 3
+dabbu y = 555
+dabbu x = 'hello'
 
-chhap x
+chhap y
 `;
 
 const baseCode = compiler(code)
-const result = codeRunner(baseCode)
-console.log(result);
+// const result = codeRunner(baseCode)
+// console.log(result)

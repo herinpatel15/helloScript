@@ -4,8 +4,10 @@ import { parser } from "./parser";
 
 export function compiler(input: string) {
     const tokens = lexer(input) as { type: string, value: string | number }[]
+    console.log(tokens);
+    
     const ast = parser(tokens)
     // console.log(ast)
-    const executableCode = codeGen({node: ast})
-    return executableCode
+    // const executableCode = codeGen({node: ast})
+    // return executableCode
 }

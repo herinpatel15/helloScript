@@ -14,9 +14,28 @@ export function DabbuLogic({ tokens }: {
     if (tokens[0].type === Token.OPERATOR && tokens[0].value === Operators.EQUALTO) {
         tokens.shift()
         let expression = ''
-        while (tokens.length > 0 && tokens[0].type !== Token.KEYWORD) {
-            expression += tokens.shift()!.value
+        if (tokens[0].type === Token.NUMBER) {
+            while (tokens.length > 0 && tokens[0].type !== Token.KEYWORD) {
+                // console.log(tokens);
+                
+                expression += tokens.shift()!.value
+    
+                // console.log("done : "+expression);
+                
+            }
+        } else if (tokens[0].type === Token.STRING) {
+            tokens.shift()
+            console.log(tokens[0]);
+            tokens.shift()
+            if (tokens[0].type === Token.STRING) {
+                console.log('done');
+                tokens.shift()
+            }
+            console.log(tokens);
+            
+            
         }
+        
         declaration.value = expression.trim()
     }
     return declaration
