@@ -1,10 +1,22 @@
 export type Declaration = {
-    type: string;
+    type: "Declaration";
     name: string | number;
     value: string | null;
 }
 
+export type Print = {
+    type: "Print",
+    expression: string | number
+}
+
 export type AST = {
     type: string;
-    body: Declaration[] | [];
+    body: (Declaration | Print)[];
+}
+
+export enum TokenType {
+    KEYWORD,
+    OPERATOR,
+    IDENTIFIER,
+    NUMBER,
 }
