@@ -1,10 +1,10 @@
 import { ChhapLogic } from "../allChecks/chhap_logic";
 import { DabbuLogic } from "../allChecks/dabbu_logic";
 import { Keywords, Token } from "../constants";
-import { AST } from "../types";
+import { AST, Declaration, Print } from "../types";
 
 export function parser(tokens: { type: string, value: string | number }[]) {
-    let ast: AST = {
+    let ast: AST | Declaration | Print = {
         type: 'Program',
         body: [],
     }

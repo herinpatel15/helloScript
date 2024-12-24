@@ -6,7 +6,7 @@ export type Declaration = {
 
 export type Print = {
     type: "Print",
-    expression: string | number
+    expression: string | number | null
 }
 
 export type AST = {
